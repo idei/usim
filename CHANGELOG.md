@@ -6,6 +6,8 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-04-21
+
 ### Added
 - Database translation architecture based on identifier keys with language-specific values and optional media payload (`usim_languages`, `usim_text_keys`, `usim_text_values`).
 - New package models: `UsimLanguage`, `UsimTextKey`, and `UsimTextValue`.
