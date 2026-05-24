@@ -108,31 +108,35 @@ return [
     |--------------------------------------------------------------------------
     |
     | Configuracion base para traducciones en base de datos del paquete USIM.
+    |
     */
     'i18n' => [
         'default_locale' => env('USIM_DEFAULT_LOCALE', env('APP_LOCALE', 'en')),
         'fallback_locale' => env('USIM_FALLBACK_LOCALE', 'en'),
-        'auto_key_max_length' => (int) env('USIM_I18N_AUTO_KEY_MAX_LENGTH', 20),
+        'auto_key_max_length' => (int) env('USIM_I18N_AUTO_KEY_MAX_LENGTH', 30),
         'log_channel' => env('USIM_I18N_LOG_CHANNEL', 'i18n'),
         'log_autokey_suggestions' => env('USIM_I18N_LOG_AUTOKEY_SUGGESTIONS', true),
+        'languages' => [
+            ['code' => 'en', 'name' => 'English', 'native_name' => 'English', 'active' => true],
+            ['code' => 'es', 'name' => 'Spanish', 'native_name' => 'Espanol', 'active' => true],
+            ['code' => 'it', 'name' => 'Italian', 'native_name' => 'Italiano', 'active' => true],
+            ['code' => 'fr', 'name' => 'French', 'native_name' => 'Français', 'active' => false],
+            ['code' => 'de', 'name' => 'German', 'native_name' => 'Deutsch', 'active' => false],
+            ['code' => 'zh', 'name' => 'Chinese', 'native_name' => '中文', 'active' => false],
+            ['code' => 'ja', 'name' => 'Japanese', 'native_name' => '日本語', 'active' => false],
+            ['code' => 'pt', 'name' => 'Portuguese', 'native_name' => 'Português', 'active' => false],
+        ],
     ],
 
-       /*
-        |--------------------------------------------------------------------------
-        | Headless Mode
-        |--------------------------------------------------------------------------
-        | Cuando está activado (true), USIM no sirve vistas HTML desde el catch-all
-        | web. Todos los clientes deben consumir /api/ui directamente.
-        | Útil para aplicaciones backend-driven que no necesitan renderer web.
-        |
-        | Por defecto: false (backward compatible)
-        */
-       'headless_mode' => env('USIM_HEADLESS_MODE', false),
-
     /*
-    |--------------------------------------------------------------------------
-    | Registered UI Services
-    |--------------------------------------------------------------------------
-    */
-    // Los servicios se registrarán aquí, actualmente se merging con el config del app
+     |--------------------------------------------------------------------------
+     | Headless Mode
+     |--------------------------------------------------------------------------
+     | Cuando está activado (true), USIM no sirve vistas HTML desde el catch-all
+     | web. Todos los clientes deben consumir /api/ui directamente.
+     | Útil para aplicaciones backend-driven que no necesitan renderer web.
+     |
+     | Por defecto: false (backward compatible)
+     */
+    'headless_mode' => env('USIM_HEADLESS_MODE', false),
 ];
