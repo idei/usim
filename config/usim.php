@@ -80,7 +80,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Root', 'description' => 'User with total and unconditional access to all features.'],
                 'es' => ['display_name' => 'Root', 'description' => 'Usuario con acceso total e incondicional a todas las funciones.'],
-                'it' => ['display_name' => 'Root', 'description' => 'Utente con accesso totale e incondizionato a tutte le funzionalità.'],
             ],
             'priority' => 100,
             'home_screen' => UsersManager::class,
@@ -90,7 +89,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Administrator', 'description' => 'Manages the system and users.'],
                 'es' => ['display_name' => 'Administrator', 'description' => 'Gestiona el sistema y los usuarios.'],
-                'it' => ['display_name' => 'Administrator', 'description' => 'Gestisce il sistema e gli utenti.'],
             ],
             'priority' => 80,
             'home_screen' => UsersManager::class,
@@ -100,7 +98,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Registered', 'description' => 'Registered user with limited permissions.'],
                 'es' => ['display_name' => 'Registered', 'description' => 'Usuario registrado con permisos limitados.'],
-                'it' => ['display_name' => 'Registered', 'description' => 'Utente registrato con permessi limitati.'],
             ],
             'priority' => 60,
             'home_screen' => Home::class,
@@ -110,7 +107,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Approved', 'description' => 'Approved user with access to additional features.'],
                 'es' => ['display_name' => 'Approved', 'description' => 'Usuario aprobado con acceso a funciones adicionales.'],
-                'it' => ['display_name' => 'Approved', 'description' => 'Utente approvato con accesso a funzionalità aggiuntive.'],
             ],
             'priority' => 40,
             'home_screen' => Home::class,
@@ -120,7 +116,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Translator', 'description' => 'User responsible for managing translations.'],
                 'es' => ['display_name' => 'Translator', 'description' => 'Usuario responsable de gestionar las traducciones.'],
-                'it' => ['display_name' => 'Translator', 'description' => 'Utente responsabile della gestione delle traduzioni.'],
             ],
             'priority' => 20,
             'home_screen' => TranslateManager::class,
@@ -130,7 +125,6 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'Developer', 'description' => 'User with access to development and debugging tools.'],
                 'es' => ['display_name' => 'Developer', 'description' => 'Usuario con acceso a herramientas de desarrollo y depuración.'],
-                'it' => ['display_name' => 'Developer', 'description' => 'Utente con accesso a strumenti di sviluppo e debug.'],
             ],
             'priority' => 10,
             'home_screen' => Home::class,
@@ -143,28 +137,24 @@ return [
             'default_translations' => [
                 'en' => ['display_name' => 'View System Logs', 'description' => 'Allows viewing system activity and error logs.'],
                 'es' => ['display_name' => 'View System Logs', 'description' => 'Permite ver los registros de actividad y errores del sistema.'],
-                'it' => ['display_name' => 'View System Logs', 'description' => 'Consente di visualizzare i registri di sistema e gli errori.'],
             ],
         ],
         'debug.access' => [
             'default_translations' => [
                 'en' => ['display_name' => 'Access Debug Tools', 'description' => 'Allows access to debugging and diagnostic tools.'],
                 'es' => ['display_name' => 'Access Debug Tools', 'description' => 'Permite acceder a herramientas de depuración y diagnóstico.'],
-                'it' => ['display_name' => 'Access Debug Tools', 'description' => 'Consente l\'accesso a strumenti di debug e diagnostici.'],
             ],
         ],
         'manage.users' => [
             'default_translations' => [
                 'en' => ['display_name' => 'Manage Users', 'description' => 'Allows creating, editing, and deleting users.'],
                 'es' => ['display_name' => 'Manage Users', 'description' => 'Permite crear, editar y eliminar usuarios.'],
-                'it' => ['display_name' => 'Manage Users', 'description' => 'Consente di creare, modificare ed eliminare utenti.'],
             ],
         ],
         'manage.roles' => [
             'default_translations' => [
                 'en' => ['display_name' => 'Manage Roles', 'description' => 'Allows creating, editing, and deleting roles and their permissions.'],
                 'es' => ['display_name' => 'Manage Roles', 'description' => 'Permite crear, editar y eliminar roles y sus permisos.'],
-                'it' => ['display_name' => 'Manage Roles', 'description' => 'Consente di creare, modificare ed eliminare ruoli e i loro permessi.'],
             ],
         ],
     ],
