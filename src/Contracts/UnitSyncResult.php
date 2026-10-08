@@ -2,13 +2,19 @@
 
 namespace Idei\Usim\Contracts;
 
+use ArrayAccess;
+use Idei\Usim\Contracts\Concerns\ArrayAccessibleDto;
+
 /**
  * Result DTO for organizational unit synchronization operations.
  *
  * @phpstan-consistent-constructor
+ * @implements ArrayAccess<string, mixed>
  */
-readonly class UnitSyncResult
+readonly class UnitSyncResult implements ArrayAccess, SyncResultInterface
 {
+    use ArrayAccessibleDto;
+
     /**
      * @param  array<int, string>  $generatedTranslationFiles
      * @param  array<int, string>  $errors
@@ -39,8 +45,37 @@ readonly class UnitSyncResult
         return $this->skipped;
     }
 
+    public function getSkipReason(): ?string
+    {
+        return $this->skipReason !== '' ? $this->skipReason : null;
+    }
+
     public function isSuccess(): bool
     {
         return ! $this->skipped && empty($this->errors);
+    }
+
+    /**
+     * @return list<string>
+     */
+    public function getErrors(): array
+    {
+        return array_values($this->errors);
+    }
+
+    /**
+     * @return array{skipped: bool, skip_reason: string, deleted_count: int, upserted_count: int, hierarchy_updated_count: int, generated_translation_files: list<string>, errors: list<string>}
+     */
+    public function toArray(): array
+    {
+        return [
+            'skipped' => $this->skipped,
+            'skip_reason' => $this->skipReason,
+            'deleted_count' => $this->deletedCount,
+            'upserted_count' => $this->upsertedCount,
+            'hierarchy_updated_count' => $this->hierarchyUpdatedCount,
+            'generated_translation_files' => array_values($this->generatedTranslationFiles),
+            'errors' => array_values($this->errors),
+        ];
     }
 }
